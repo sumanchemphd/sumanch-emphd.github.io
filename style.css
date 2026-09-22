@@ -740,3 +740,189 @@ h1 span {
     }
 
 }
+
+/* =====================================
+   RESEARCH EXPERIENCE
+===================================== */
+
+.experience-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-top: 35px;
+}
+
+.experience-card {
+    display: grid;
+    grid-template-columns: 135px minmax(0, 1fr);
+    gap: 30px;
+
+    background: #ffffff;
+    border: 1px solid #dce9eb;
+    border-radius: 16px;
+
+    padding: 28px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-2px);
+    border-color: #b8dde1;
+    box-shadow: 0 8px 25px rgba(20, 60, 70, 0.07);
+}
+
+
+/* DATE */
+
+.experience-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: #087e89;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+
+    padding-top: 5px;
+}
+
+
+/* CONTENT */
+
+.experience-body {
+    min-width: 0;
+}
+
+.experience-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 25px;
+
+    border-bottom: 1px solid #edf2f3;
+    padding-bottom: 16px;
+}
+
+.experience-top h3 {
+    margin: 0;
+    font-size: 22px;
+    color: #14222b;
+}
+
+.experience-top h4 {
+    margin: 4px 0 0;
+    font-size: 16px;
+    color: #087e89;
+}
+
+.experience-location {
+    margin: 2px 0 0;
+    color: #78878d;
+    font-size: 13px;
+}
+
+
+/* TYPE BADGE */
+
+.experience-type {
+    white-space: nowrap;
+
+    background: #e4f7f8;
+    color: #087e89;
+
+    padding: 7px 12px;
+    border-radius: 999px;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+
+/* SUMMARY */
+
+.experience-summary {
+    margin: 18px 0 14px;
+
+    max-width: 900px;
+
+    color: #4e6068;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* BULLET POINTS */
+
+.experience-points {
+    margin: 15px 0 20px;
+    padding-left: 20px;
+}
+
+.experience-points li {
+    margin-bottom: 9px;
+    padding-left: 4px;
+
+    color: #53656c;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.experience-points li::marker {
+    color: #28b8c4;
+}
+
+
+/* SKILL TAGS */
+
+.experience-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.experience-tags span {
+    background: #eef8f9;
+    color: #176b73;
+
+    border-radius: 999px;
+
+    padding: 5px 10px;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* =====================================
+   EXPERIENCE MOBILE
+===================================== */
+
+@media (max-width: 750px) {
+
+    .experience-card {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .experience-date {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 7px;
+    }
+
+    .experience-top {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .experience-type {
+        align-self: flex-start;
+    }
+
+}
