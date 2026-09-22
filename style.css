@@ -926,3 +926,358 @@ h1 span {
     }
 
 }
+/* =====================================
+   EDUCATION
+===================================== */
+
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.education-card {
+    display: flex;
+    gap: 20px;
+    min-width: 0;
+
+    background: #ffffff;
+    border: 1px solid #dce9eb;
+    border-radius: 16px;
+
+    padding: 25px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-2px);
+    border-color: #b8dde1;
+    box-shadow: 0 8px 25px rgba(20, 60, 70, 0.07);
+}
+
+.featured-degree {
+    grid-column: 1 / -1;
+}
+
+.degree-icon {
+    flex: 0 0 65px;
+
+    width: 65px;
+    height: 65px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 14px;
+
+    background: #e4f7f8;
+    color: #087e89;
+
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.degree-content {
+    min-width: 0;
+}
+
+.degree-level {
+    color: #28a9b5;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+}
+
+.degree-content h3 {
+    margin: 4px 0 2px;
+    font-size: 20px;
+    color: #14222b;
+}
+
+.degree-content h4 {
+    margin: 0 0 10px;
+    color: #087e89;
+    font-size: 14px;
+}
+
+.degree-content p {
+    margin: 0;
+    color: #617178;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.degree-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 14px;
+}
+
+.degree-tags span {
+    padding: 5px 9px;
+
+    background: #eef8f9;
+    color: #176b73;
+
+    border-radius: 999px;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* =====================================
+   TECHNICAL SKILLS
+===================================== */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+
+    margin-top: 30px;
+}
+
+.skill-card {
+    min-width: 0;
+
+    background: #ffffff;
+
+    border: 1px solid #dce9eb;
+    border-radius: 15px;
+
+    padding: 22px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-3px);
+
+    border-color: #b8dde1;
+
+    box-shadow:
+        0 8px 24px rgba(20, 60, 70, 0.07);
+}
+
+.skill-icon {
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+    place-items: center;
+
+    margin-bottom: 14px;
+
+    border-radius: 10px;
+
+    background: #e4f7f8;
+    color: #087e89;
+
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.skill-card h3 {
+    margin: 0 0 15px;
+
+    color: #14222b;
+
+    font-size: 17px;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.skill-tags span {
+    display: inline-block;
+
+    padding: 5px 9px;
+
+    background: #f0f7f8;
+    color: #3d6269;
+
+    border: 1px solid #e1eeee;
+    border-radius: 7px;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* =====================================
+   EDUCATION + SKILLS RESPONSIVE
+===================================== */
+
+@media (max-width: 950px) {
+
+    .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .education-grid,
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-degree {
+        grid-column: auto;
+    }
+
+    .education-card {
+        flex-direction: column;
+    }
+
+    .degree-icon {
+        flex: none;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .skill-card,
+    .education-card {
+        padding: 18px;
+    }
+
+}
+/* =====================================
+   TEACHING INTERESTS
+===================================== */
+
+.teaching-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.teaching-card {
+    min-width: 0;
+    background: #ffffff;
+    border: 1px solid #dce9eb;
+    border-radius: 15px;
+    padding: 22px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.teaching-card:hover {
+    transform: translateY(-3px);
+    border-color: #b8dde1;
+    box-shadow: 0 8px 24px rgba(20, 60, 70, 0.07);
+}
+
+.teaching-icon {
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+    place-items: center;
+
+    margin-bottom: 15px;
+
+    background: #e4f7f8;
+    color: #087e89;
+
+    border-radius: 10px;
+
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.teaching-card h3 {
+    margin: 0 0 10px;
+    color: #14222b;
+    font-size: 17px;
+    line-height: 1.4;
+}
+
+.teaching-card p {
+    margin: 0;
+    color: #617178;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+
+/* Teaching philosophy */
+
+.teaching-philosophy {
+    margin-top: 25px;
+
+    padding: 22px 25px;
+
+    background: #f3fafb;
+
+    border-left: 4px solid #28b8c4;
+    border-radius: 10px;
+}
+
+.teaching-philosophy-label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #087e89;
+
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+}
+
+.teaching-philosophy p {
+    margin: 0;
+
+    max-width: 950px;
+
+    color: #52636b;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.teaching-philosophy strong {
+    color: #087e89;
+}
+
+
+/* Responsive */
+
+@media (max-width: 950px) {
+
+    .teaching-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .teaching-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
